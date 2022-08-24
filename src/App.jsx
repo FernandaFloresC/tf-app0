@@ -1,22 +1,20 @@
 import React from 'react';
-import NavBar from './components/NavBar';
-import SideBar from './components/SideBar';
-import Footer from './components/Footer';
-import Center from './components/Center';
-import './index.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './views/Home';
+import Authorization from './views/Authorization';
+import Movements from './views/Movements';
 
 function App() {
   return (
     <div>
-      <div className="main-grid">
-        <SideBar />
-        <div>
-          <NavBar />
-          <Center />
-        </div>
-      </div>
-
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Authorization" element={<Authorization />} />
+          <Route path="/Movements" element={<Movements />} />
+        </Routes>
+      </Router>
+     
     </div>
   );
 }

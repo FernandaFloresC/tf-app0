@@ -5,9 +5,9 @@ import DashboardMulti from './DashboardMulti';
 const Center = () => {
   return (
     <div>
-      <div className="flex flex-col">
+      <div className='flex flex-col justify-between'>
         <AuthMenu />
-        <DashboardMulti />
+        {/* <DashboardMulti /> */}
       </div>
     </div>
   );
